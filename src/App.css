@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.col {
+  height: 88vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.list-group a {
+  color: black;
+}
+
+.list-group a:hover {
+  color: rgb(68, 65, 65);
+}
+
+.form input {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap');
+
+
+#login-container {
+  min-height: 400px;
+  width: 350px;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10vh auto;
+  background: #fffffb;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+  .profile-img {
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: -50px;
+    left: 125px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .profile-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+
+  h2 {
+    font-family: 'Sriracha', arial, sans-serif;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #ff6b6c;
+  }
+
+  .description {
+    margin-bottom: 20px;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+
+    a {
+      text-align: center;
+      border: solid 2px #ff6b6c;
+      width: 75px;
+      padding: 5px 0;
+      border-radius: 5px;
+
+      &:hover {
+        background: #ff6b6c;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  button {
+    width: 80%;
+    height: 80px;
+    font-size: 2rem;
+    margin: 30px 10% 10% 10%;
+    color: #fffffb;
+    border: none;
+    border-radius: 5px;
+    background: #5b5f97;
+    background-size: 300% 300%;
+    outline: none;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      background-color: white;
+      border: 2px solid #5b5f97;
+      color: #5b5f97;
+    }
+
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    background: #5b5f97;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    padding: 0 20px;
+    margin-left: -20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    div {
+      display: flex;
+
+      .fa-heart {
+        color: #ff6b6c;
+      }
+
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@-webkit-keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+
 }
 
-.App-link {
-  color: #61dafb;
-}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  100% {
+    background-position: 100% 50%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
 }
