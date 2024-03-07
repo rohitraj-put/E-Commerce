@@ -9,7 +9,6 @@ function Edit() {
     useEffect(() => {
         axios.get(`https://65e3567b88c4088649f5a918.mockapi.io/ecommerce/${id}`)
             .then(res => {
-                // console.log(res)
                 setDatas(res.data)
             })
             .catch(err => {

@@ -33,7 +33,7 @@ function Sign() {
                         <Admin /> </> :
                     <>
                         <Header />
-                        <div className="=main mt-5">
+                        <div className="main-form mt-5">
                             <p className="sign" align="center">Sign in</p>
                             <form className="form1" onSubmit={submitHandler}>
                                 <input className="un "

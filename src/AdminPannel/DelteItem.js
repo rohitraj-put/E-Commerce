@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { MdOutlineCancel } from "react-icons/md";
 
 function DeleteItem() {
     const { id } = useParams()
@@ -45,8 +46,8 @@ function DeleteItem() {
                         onChange={e => setDatas({ ...datas, info: e.target.value })} value={datas.info}
                     />
                     <button className='btn btn-danger mt-3 px-5'>Delete</button>&nbsp;&nbsp;
-                    <button className='btn btn-warning mt-3 px-5'>
-                        <Link to='/sign/suspend' style={{ color: "blue" }}>Cancel</Link>
+                    <button className='btn btn-outline-secondary mt-3 px-5'>
+                        <Link to='/sign/suspend' style={{ color: "blue" }}><MdOutlineCancel /> Cancel</Link>
                     </button>
                 </form>
             </div>

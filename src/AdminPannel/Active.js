@@ -18,7 +18,7 @@ function Active() {
     const tableInfor = datas.map(data => <tr key={data.id}>
         <td>{data.id}</td>
         <td>{data.title}</td>
-        <td><img style={{ width: "100px" }} src={data.avatar} alt='productimg' /></td>
+        <td><img style={{ width: "100px" }} src={data.avatar} alt='productimg' className='imgRatio' /></td>
         <td>{data.price}</td>
         <td>{data.proCateogry}</td>
         <td>{data.info}</td>

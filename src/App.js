@@ -13,16 +13,17 @@ import DelteItem from './AdminPannel/DelteItem';
 import CardView from './AdminPannel/CardView';
 
 
+
 function App() {
+
   return (
     <>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sign' element={<Sign />}>
           <Route path='active' element={<Active />} />
-          <Route path='view' element={<View />}>
-            <Route path='view/:id' element={<CardView />} />
-          </Route>
+          <Route path='view' element={<View />} />
+          <Route path='view/:id' element={<CardView />} />
           <Route path='update' element={<Update />} />
           <Route path='update/:id' element={<Edit />} />
           <Route path='suspend' element={<Suspend />} />

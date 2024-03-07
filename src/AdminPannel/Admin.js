@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useNavigate } from 'react-router-dom'
+import { IoChevronBack } from "react-icons/io5";
 
 
 function Admin() {
-
+    const backBtn = useNavigate()
     return (
         <>
 
@@ -11,6 +12,9 @@ function Admin() {
             <div className='row container-fluid d-flex flex-wrap  justify-content-center'>
                 <div className='col col-3 bg-body-tertiary border border-warning'>
                     <div className="list-group mt-5 p-5 fs-4 active">
+                        <button className='btn btn-warning px-4 mb-4' onClick={() => backBtn(-1)}>
+                            <IoChevronBack />&nbsp;&nbsp;&nbsp;  Back
+                        </button>
                         <Link to='active'>Active</Link>
                         <Link to='view'>View</Link>
                         <Link to='update'>Update</Link>

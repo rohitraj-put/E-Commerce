@@ -6,14 +6,15 @@ function Carousel() {
             <div id="carouselExample" className="carousel slide">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="https://img.freepik.com/free-photo/photocomposition-horizontal-online-shopping-banner_23-2151201763.jpg?t=st=1709397200~exp=1709400800~hmac=e79a170ac01e87b57d745ab4d1b641b709b869e4611660b346159e0996a6cb0e&w=1060" className="d-block w-100" alt="..." />
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Consumables/X-GL/Feb5/PC_Hero_1_3000._CB582457311_.jpg" className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://img.freepik.com/free-photo/shopping-cart-supermarket-generative-ai_169016-29564.jpg?size=626&ext=jpg&ga=GA1.1.2103574665.1701945590&semt=ais" className="d-block w-100" alt="..." />
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Unrec/TallHero_3000X1200_Unrec._CB593464763_.jpg" className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://img.freepik.com/free-photo/photocomposition-horizontal-shopping-banner-with-woman-big-smartphone_23-2151201773.jpg?t=st=1709397281~exp=1709400881~hmac=eb502a9e114966bf76754b12b47a810c6034cc76acb5f7594a1aee5e2d64c92f&w=1060" className="d-block w-100" alt="..." />
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/GW/Uber/Nov/D103625178_DesktopTallHero_3000x1200._CB574597993_.jpg" className="d-block w-100" alt="..." />
                     </div>
+
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
