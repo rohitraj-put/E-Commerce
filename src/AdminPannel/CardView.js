@@ -31,10 +31,10 @@ function CardView() {
                     <p className="card-text text-secondary">{posts.info} Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <div className='d-flex justify-content-between'>
                         <NavLink to="/" className="py-2 fw-bold">
-                            <button className='btn btn-warning'>Price : ${posts.price}</button>
+                            <button className='btn btn-dark'>Price : ${posts.price}</button>
                         </NavLink>
                         <NavLink to="/" className="py-2 fw-bold">
-                            <button className='btn btn-warning'>Add <FaShoppingCart /></button>
+                            <button className='btn btn-dark'>Add <FaShoppingCart /></button>
                         </NavLink>
                     </div>
                 </div>

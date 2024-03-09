@@ -24,7 +24,7 @@ function View() {
         <td>{data.proCateogry}</td>
         <td>{data.info}</td>
         <td>
-            <Link className='btn btn-warning' to={data.id}>View Card</Link>
+            <Link className='btn btn-outline-success' to={data.id}>View Card</Link>
         </td>
     </tr>)
 

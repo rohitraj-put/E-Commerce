@@ -1,12 +1,16 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 
 
 function AdminHeader() {
+    const urlNavigate = useNavigate()
     const clickHandler = () => {
+        urlNavigate('/sign')
         localStorage.clear()
         window.location.reload()
+
+
     }
     return (
         <>
@@ -21,7 +25,7 @@ function AdminHeader() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
-                        <button className="btn btn-warning" onClick={clickHandler}>Log Out</button>
+                        <button className="btn btn-outline-success" onClick={clickHandler}>Log Out</button>
 
                     </div>
                 </div>

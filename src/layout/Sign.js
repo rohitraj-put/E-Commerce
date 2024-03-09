@@ -39,11 +39,12 @@ function Sign() {
                                 <input className="un "
                                     type="email" align="center"
                                     placeholder="Enter Email"
-                                    ref={email} />
+                                    ref={email} required />
+
                                 <input className="pass"
                                     type="password" align="center"
                                     placeholder="Password"
-                                    ref={password} />
+                                    ref={password} required />
                                 <button className="submit" align="center">Sign in</button>
                             </form>
                             <p className="forgot" align="center"><NavLink to="/sign">Forgot Password?</NavLink></p>

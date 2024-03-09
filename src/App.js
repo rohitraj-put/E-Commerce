@@ -11,6 +11,8 @@ import Suspend from './AdminPannel/Suspend';
 import Edit from './AdminPannel/Edit';
 import DelteItem from './AdminPannel/DelteItem';
 import CardView from './AdminPannel/CardView';
+import InsertData from './AdminPannel/InsertData';
+import PageNotFound from './layout/PageNotFound';
 
 
 
@@ -22,6 +24,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/sign' element={<Sign />}>
           <Route path='active' element={<Active />} />
+          <Route path='insert' element={<InsertData />} />
           <Route path='view' element={<View />} />
           <Route path='view/:id' element={<CardView />} />
           <Route path='update' element={<Update />} />
@@ -29,7 +32,7 @@ function App() {
           <Route path='suspend' element={<Suspend />} />
           <Route path='suspend/:id' element={<DelteItem />} />
         </Route>
-        <Route path='*' element={<h1>Page not found</h1>} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
 
     </>

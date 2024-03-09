@@ -23,7 +23,7 @@ function Suspend() {
         <td>{data.price}</td>
         <td>{data.proCateogry}</td>
         <td>{data.info}</td>
-        <td><Link style={{ color: "blue" }} className='btn btn-warning' to={data.id}>Delete</Link></td>
+        <td><Link style={{ color: "blue" }} className='btn btn-outline-danger' to={data.id}>Delete</Link></td>
     </tr>)
 
     return (

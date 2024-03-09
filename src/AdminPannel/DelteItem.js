@@ -19,7 +19,7 @@ function DeleteItem() {
     }, [])
 
     const SubmitHendler = () => {
-        navigate('/sign/view')
+        navigate('/sign/active')
         axios.delete(`https://65e3567b88c4088649f5a918.mockapi.io/ecommerce/${id}`, datas)
     }
 
@@ -46,7 +46,7 @@ function DeleteItem() {
                         onChange={e => setDatas({ ...datas, info: e.target.value })} value={datas.info}
                     />
                     <button className='btn btn-danger mt-3 px-5'>Delete</button>&nbsp;&nbsp;
-                    <button className='btn btn-outline-secondary mt-3 px-5'>
+                    <button className='btn btn-outline-success mt-3 px-5'>
                         <Link to='/sign/suspend' style={{ color: "blue" }}><MdOutlineCancel /> Cancel</Link>
                     </button>
                 </form>
