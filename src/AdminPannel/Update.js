@@ -22,7 +22,7 @@ function Update() {
         <td>{data.price}</td>
         <td>{data.proCateogry}</td>
         <td>{data.info}</td>
-        <td><Link style={{ color: "blue" }} className='btn btn-outline-success' to={data.id}>Edit</Link></td>
+        <td><Link style={{ color: "blue" }} to={data.id}><button className='btn btn-outline-danger'>Edit</button></Link></td>
     </tr>)
 
     return (

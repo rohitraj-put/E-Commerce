@@ -15,10 +15,10 @@ function ProductCard(props) {
                     <p className="card-text text-secondary">{props.info} Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <div className='d-flex justify-content-between'>
                         <NavLink to="/" className="py-2 fw-bold">
-                            <button className='btn btn-outline-dark'>Price : ${props.price}</button>
+                            <button className='btn btn-danger'>Price : ${props.price}</button>
                         </NavLink>
                         <NavLink to="/" className="py-2 fw-bold">
-                            <button className='btn btn-outline-dark'>Add <FaShoppingCart /></button>
+                            <button className='btn btn-outline-danger'>Add <FaShoppingCart /></button>
                         </NavLink>
                     </div>
                 </div>

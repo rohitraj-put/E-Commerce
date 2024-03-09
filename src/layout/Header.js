@@ -56,10 +56,10 @@ function Header() {
                             </li>
 
                         </ul>
-                        <button className="btn btn-outline-warning" type="submit"><NavLink to='/sign' style={{ color: "blue" }}>Log In</NavLink></button>
+                        <NavLink to='/sign' style={{ color: "blue" }}><button className="btn btn-outline-danger" type="submit">Log In</button></NavLink>
                     </div>
                 </div>
-            </nav>
+            </nav >
         </>
     )
 }

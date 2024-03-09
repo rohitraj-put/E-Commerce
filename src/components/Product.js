@@ -29,22 +29,22 @@ function Product() {
     return (
         <>
             <div className="main">
-                <h2 id="galleryHeading" className="shadowHeading  text-center">Shoping Now</h2>
+                <h2 id="galleryHeading" className="shadowHeading  text-center mt-4 text-danger fs-3">Shoping Now</h2>
                 <div id="myBtnContainer" className='my-4'>
-                    <button id="1" onClick={() => filterSelection('All')} className="btn btn-outline-dark m-1">All</button>
-                    <button id="2" onClick={() => filterSelection('Camera')} className="btn btn-outline-dark m-1">Camera</button>
-                    <button id="3" onClick={() => filterSelection('Laptop')} className="btn btn-outline-dark m-1">Laptop</button>
-                    <button id="4" onClick={() => filterSelection('T-shirt')} className="btn btn-outline-dark m-1">T-shirt</button >
-                    <button id="5" onClick={() => filterSelection('Table')} className="btn btn-outline-dark m-1">Table</button>
-                    <button id="6" onClick={() => filterSelection('Phone')} className="btn btn-outline-dark m-1">Phone</button>
-                    <button id="7" onClick={() => filterSelection('Tablet')} className="btn btn-outline-dark m-1">Tablet</button>
-                    <button id="8" onClick={() => filterSelection('Shoes')} className="btn btn-outline-dark m-1">Shoes</button>
+                    <button id="1" onClick={() => filterSelection('All')} className="btn btn-outline-danger m-1">All</button>
+                    <button id="2" onClick={() => filterSelection('Camera')} className="btn btn-outline-danger m-1">Camera</button>
+                    <button id="3" onClick={() => filterSelection('Laptop')} className="btn btn-outline-danger m-1">Laptop</button>
+                    <button id="4" onClick={() => filterSelection('T-shirt')} className="btn btn-outline-danger m-1">T-shirt</button >
+                    <button id="5" onClick={() => filterSelection('Table')} className="btn btn-outline-danger m-1">Table</button>
+                    <button id="6" onClick={() => filterSelection('Phone')} className="btn btn-outline-danger m-1">Phone</button>
+                    <button id="7" onClick={() => filterSelection('Tablet')} className="btn btn-outline-danger m-1">Tablet</button>
+                    <button id="8" onClick={() => filterSelection('Shoes')} className="btn btn-outline-danger m-1">Shoes</button>
                 </div >
 
-                <div className="container mt-4">
-                    <div className="row d-flex align-items-center  justify-content-center">
+                <div className="container-fluid mt-4">
+                    <div className="row d-flex align-items-center  justify-content-center gap-5">
                         {filterArr.length === 0 ? "No Products Available" : filterArr.map((element) => {
-                            return <div key={element.id} className="col-12 col-lg-4 col-xl-3 m-2">
+                            return <div key={element.id} className="col-12 col-lg-8 col-xl-3 col-sm-4 m-2">
                                 <ProductCard info={element.info} title={element.title} avatar={element.avatar} price={element.price} proCateogry={element.proCateogry} />
                             </div>
                         })}

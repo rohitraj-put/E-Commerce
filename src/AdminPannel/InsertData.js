@@ -45,7 +45,7 @@ function InsertData() {
                         onChange={e => setDatas({ ...datas, info: e.target.value })} value={datas.info}
                         required
                     />
-                    <button className='btn btn-outline-success mt-3 px-5'>Insert</button>
+                    <button className='btn btn-outline-danger mt-3 px-5'>Insert</button>
                 </form>
             </div>
             {/* <h2>{JSON.stringify(datas)}</h2> */}

@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../layout/Header'
 import Carousel from '../layout/Carousel'
 import Product from './Product'
+import ProductSlider from './ProductSlider'
 // import SimpleSlider from './CardShow'
 
 
@@ -27,38 +28,11 @@ function Home() {
             <Header />
 
             <Carousel />
-            <div className="row row-cols-1 row-cols-md-3 container-fluid mt-5">
-                <div className="col ">
-                    <div className="card h-60">
-                        <img src="https://cartzilla.createx.studio/img/home/categories/cat-sm01.jpg" className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title text-center fs-3">Man</h5>
-                        </div>
 
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-60">
-                        <img src="https://cartzilla.createx.studio/img/home/categories/cat-sm02.jpg" className="card-img-top" alt="..." />
-                        <div className="card-body" >
-                            <h5 className="card-title text-center fs-3">Woman</h5>
-
-                        </div>
-
-                    </div>
-                </div>
-                <div className="col ">
-                    <div className="card h-60">
-                        <img src="https://cartzilla.createx.studio/img/home/categories/cat-sm03.jpg" className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title text-center fs-3">Kids</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <Product />
 
-
+            <ProductSlider />
+            <ProductSlider />
 
 
             <section className="bg-danger mt-4 mb-5">
@@ -232,7 +206,35 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <div className="row row-cols-1 row-cols-md-3 container-fluid mt-5">
+                <div className="col ">
+                    <div className="card h-60">
+                        <img src="https://cartzilla.createx.studio/img/home/categories/cat-sm01.jpg" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title text-center fs-3">Man</h5>
+                        </div>
 
+                    </div>
+                </div>
+                <div className="col">
+                    <div className="card h-60">
+                        <img src="https://cartzilla.createx.studio/img/home/categories/cat-sm02.jpg" className="card-img-top" alt="..." />
+                        <div className="card-body" >
+                            <h5 className="card-title text-center fs-3">Woman</h5>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div className="col ">
+                    <div className="card h-60">
+                        <img src="https://cartzilla.createx.studio/img/home/categories/cat-sm03.jpg" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title text-center fs-3">Kids</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             {/* <SimpleSlider /> */}
         </>
