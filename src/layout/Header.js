@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { IoCartOutline } from "react-icons/io5";
+import { CiSearch } from "react-icons/ci";
 
 
 function Header() {
+    const [active, setActive] = useState('navbar-toggler-icon')
+
+    const NavToggle = () => {
+        active === 'navbar-toggler-icon' ? setActive('navbar-toggler-icon btn-close') : setActive('navbar-toggler-icon')
+    }
 
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container">
+                <div className="container-fluid">
                     <NavLink className="navbar-brand fw-bold fs-3" to="/">
                         <img src='https://jdkservices.in/wp-content/uploads/2022/09/Myntra_logo.png' style={{ width: "200px", height: "50px" }} />
                     </NavLink>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+                    <div className="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className={active} onClick={NavToggle}></span>
+                    </div>
+
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
@@ -56,7 +64,12 @@ function Header() {
                             </li>
 
                         </ul>
-                        <NavLink to='/sign' style={{ color: "blue" }}><button className="btn btn-outline-danger" type="submit">Log In</button></NavLink>
+                        <div class="col-auto d-flex">
+                            <input type="text" class="border rounded-start p-2" id="inputPassword2" placeholder="Search"></input>
+                            <i className='border rounded-end fs-4 px-3'><CiSearch /></i>
+                        </div>
+                        <NavLink to='#' className="px-3"><button className="btn btn-outline-danger fw-bold" type="submit"><IoCartOutline /> Cart</button></NavLink>
+                        <NavLink to='/sign'><button className="btn btn-outline-danger fw-bold" type="submit">Log In</button></NavLink>
                     </div>
                 </div>
             </nav >
