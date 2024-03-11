@@ -55,6 +55,7 @@ tr:nth-child(even) {
   flex-wrap: wrap;
 }
 
+
 .imgRatio {
   aspect-ratio: 3/2;
 }
@@ -198,8 +199,4 @@ tr:nth-child(even) {
 
 }
 
-@media screen and (max-width: 800px) {
-  .d-flex {
-    display: block;
-  }
-}
+@media screen and (max-width: 800px) {}

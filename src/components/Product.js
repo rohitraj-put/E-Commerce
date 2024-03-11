@@ -42,10 +42,10 @@ function Product() {
                 </div >
 
                 <div className="container-fluid mt-4">
-                    <div className="row d-flex align-items-center  justify-content-center gap-5">
+                    <div className="row d-flex align-items-center  justify-content-center g-2">
                         {filterArr.length === 0 ? "No Products Available" : filterArr.map((element) => {
-                            return <div key={element.id} className="col-12 col-lg-8 col-xl-3 col-sm-4 m-2">
-                                <ProductCard info={element.info} title={element.title} avatar={element.avatar} price={element.price} proCateogry={element.proCateogry} />
+                            return <div key={element.id} className="col-8 col-lg-8 col-xl-3 col-sm-2">
+                                <ProductCard info={element.info} title={element.title} avatar={element.avatar} price={element.price} proCateogry={element.proCateogry} cardId={element.id} />
                             </div>
                         })}
                     </div>

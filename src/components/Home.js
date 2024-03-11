@@ -3,6 +3,7 @@ import Header from '../layout/Header'
 import Carousel from '../layout/Carousel'
 import Product from './Product'
 import ProductSlider from './ProductSlider'
+import Footer from '../layout/Footer'
 // import SimpleSlider from './CardShow'
 
 
@@ -235,6 +236,8 @@ function Home() {
                     </div>
                 </div>
             </div>
+
+            <Footer />
 
             {/* <SimpleSlider /> */}
         </>

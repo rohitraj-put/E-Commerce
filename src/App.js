@@ -13,6 +13,7 @@ import DelteItem from './AdminPannel/DelteItem';
 import CardView from './AdminPannel/CardView';
 import InsertData from './AdminPannel/InsertData';
 import PageNotFound from './layout/PageNotFound';
+import ProductInfo from './components/ProductInfo';
 
 
 
@@ -32,6 +33,7 @@ function App() {
           <Route path='suspend' element={<Suspend />} />
           <Route path='suspend/:id' element={<DelteItem />} />
         </Route>
+        <Route path='/:id' element={<ProductInfo />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
 

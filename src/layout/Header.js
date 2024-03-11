@@ -16,7 +16,7 @@ function Header() {
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                     <NavLink className="navbar-brand fw-bold fs-3" to="/">
-                        <img src='https://jdkservices.in/wp-content/uploads/2022/09/Myntra_logo.png' style={{ width: "200px", height: "50px" }} />
+                        <img src='https://jdkservices.in/wp-content/uploads/2022/09/Myntra_logo.png' style={{ width: "200px", height: "50px" }} alt='logo' />
                     </NavLink>
                     <div className="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className={active} onClick={NavToggle}></span>
@@ -64,12 +64,19 @@ function Header() {
                             </li>
 
                         </ul>
-                        <div class="col-auto d-flex">
-                            <input type="text" class="border rounded-start p-2" id="inputPassword2" placeholder="Search"></input>
-                            <i className='border rounded-end fs-4 px-3'><CiSearch /></i>
+                        <div className="col-auto d-flex">
+                            <input type="text" className="border border-danger rounded-start p-2" id="inputPassword2" placeholder="Search"></input>
+                            <i className='border border-danger rounded-end fs-4 px-3'><CiSearch /></i>
                         </div>
-                        <NavLink to='#' className="px-3"><button className="btn btn-outline-danger fw-bold" type="submit"><IoCartOutline /> Cart</button></NavLink>
+                        <NavLink to='#' className="px-3"><button type="button" class="btn btn-outline-danger position-relative">
+                            <IoCartOutline />
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                2
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </button></NavLink>
                         <NavLink to='/sign'><button className="btn btn-outline-danger fw-bold" type="submit">Log In</button></NavLink>
+
                     </div>
                 </div>
             </nav >
