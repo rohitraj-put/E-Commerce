@@ -48,7 +48,7 @@ function InsertData() {
                     <button className='btn btn-outline-danger mt-3 px-5'>Insert</button>
                 </form>
             </div>
-            {/* <h2>{JSON.stringify(datas)}</h2> */}
+            <h2>{JSON.stringify(datas)}</h2>
         </>
     )
 }

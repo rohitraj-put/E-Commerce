@@ -15,6 +15,7 @@ import InsertData from './AdminPannel/InsertData';
 import PageNotFound from './layout/PageNotFound';
 import ProductInfo from './components/ProductInfo';
 import React from 'react';
+import Payment from './components/Payment';
 
 
 export const UserContext = React.createContext()
@@ -41,6 +42,7 @@ function App() {
               <Route path='suspend/:id' element={<DelteItem />} />
             </Route>
             <Route path='/:id' element={<ProductInfo />} />
+            <Route path='/payment' element={<Payment />} />
             <Route path='*' element={<PageNotFound />} />
           </Routes>
         </UserChanel.Provider>

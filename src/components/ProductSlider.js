@@ -55,10 +55,9 @@ function ProductSlider() {
                 slidesPerView={5.5}
                 pagination={{ clickable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
             >
-
                 {cardSlider}
+
             </Swiper >
 
         </>
