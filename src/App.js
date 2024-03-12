@@ -14,28 +14,37 @@ import CardView from './AdminPannel/CardView';
 import InsertData from './AdminPannel/InsertData';
 import PageNotFound from './layout/PageNotFound';
 import ProductInfo from './components/ProductInfo';
+import React from 'react';
 
 
+export const UserContext = React.createContext()
+export const UserChanel = React.createContext()
 
 function App() {
 
   return (
     <>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/sign' element={<Sign />}>
-          <Route path='active' element={<Active />} />
-          <Route path='insert' element={<InsertData />} />
-          <Route path='view' element={<View />} />
-          <Route path='view/:id' element={<CardView />} />
-          <Route path='update' element={<Update />} />
-          <Route path='update/:id' element={<Edit />} />
-          <Route path='suspend' element={<Suspend />} />
-          <Route path='suspend/:id' element={<DelteItem />} />
-        </Route>
-        <Route path='/:id' element={<ProductInfo />} />
-        <Route path='*' element={<PageNotFound />} />
-      </Routes>
+      <UserContext.Provider value={"rohit"}>
+        <UserChanel.Provider value={"rajput"}>
+
+
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/sign' element={<Sign />}>
+              <Route path='active' element={<Active />} />
+              <Route path='insert' element={<InsertData />} />
+              <Route path='view' element={<View />} />
+              <Route path='view/:id' element={<CardView />} />
+              <Route path='update' element={<Update />} />
+              <Route path='update/:id' element={<Edit />} />
+              <Route path='suspend' element={<Suspend />} />
+              <Route path='suspend/:id' element={<DelteItem />} />
+            </Route>
+            <Route path='/:id' element={<ProductInfo />} />
+            <Route path='*' element={<PageNotFound />} />
+          </Routes>
+        </UserChanel.Provider>
+      </UserContext.Provider >
 
     </>
   );

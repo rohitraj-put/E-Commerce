@@ -5,10 +5,9 @@ import { IoChevronBack } from "react-icons/io5";
 
 function Admin() {
     const backBtn = useNavigate()
+
     return (
         <>
-
-
             <div className='row container-fluid d-flex flex-wrap  justify-content-center'>
                 <div className='col col-3 bg-body-tertiary border border-warning'>
                     <div className="list-group mt-5 p-5 fs-4 active">

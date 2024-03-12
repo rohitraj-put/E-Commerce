@@ -1,9 +1,13 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { UserContext, UserChanel } from '../App'
 
 
 function DeleteItem() {
+
+    const fullName = useContext(UserContext)
+    const surName = useContext(UserChanel)
     const { id } = useParams()
     const [datas, setDatas] = useState([])
     const navigate = useNavigate()
@@ -25,6 +29,7 @@ function DeleteItem() {
 
     return (
         <>
+            <h1>{fullName} {surName}</h1>
             <h1 className='p-4'>DeleteItem Card data</h1>
             <div className="mb-3">
                 <form className='form' onSubmit={SubmitHendler}>

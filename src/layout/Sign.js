@@ -4,24 +4,32 @@ import { NavLink } from 'react-bootstrap'
 import Admin from '../AdminPannel/Admin'
 import AdminHeader from '../AdminPannel/AdminHeader'
 import Header from './Header'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 function Sign() {
+
     const email = useRef()
     const password = useRef()
 
     const getEmail = localStorage.getItem("emailData")
     const getPass = localStorage.getItem("passwordData")
 
-    const submitHandler = () => {
+    const submitHandler = (e) => {
 
         if (email.current.value === "rohit@gmail.com" && password.current.value === "12345") {
             localStorage.setItem("emailData", "rohit@gmail.com")
             localStorage.setItem("passwordData", "12345")
+
         }
         else {
-            alert("please enter currect information")
+            e.preventDefault()
+            toast.error('your email and password is wrong !')
         }
     }
+
 
     return (
         <>
@@ -45,10 +53,13 @@ function Sign() {
                                     type="password" align="center"
                                     placeholder="Password"
                                     ref={password} required />
-                                <button className="submit" align="center">Sign in</button>
+                                <button className="submit" align="center">Sign in <ToastContainer /></button>
                             </form>
                             <p className="forgot" align="center"><NavLink to="/sign">Forgot Password?</NavLink></p>
-                        </div></>
+                        </div>
+
+                    </>
+
             }
         </>
     )
