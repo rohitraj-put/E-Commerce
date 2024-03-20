@@ -31,7 +31,7 @@ function Product() {
             <div className="main">
                 <h2 id="galleryHeading" className="shadowHeading  text-center mt-4 text-danger fs-3">Shoping Now</h2>
                 <div id="myBtnContainer" className='my-4'>
-                    <button id="1" onClick={() => filterSelection('All')} className="rounded-pill btn btn-outline-danger m-1 py-2 px-5">All</button>
+                    <button id="1" onClick={() => filterSelection('All')} className="rounded-pill btn btn-outline-danger m-1 py-2 px-5">All </button>
                     <button id="2" onClick={() => filterSelection('Camera')} className="rounded-pill btn btn-outline-danger m-1 py-2 px-5">Camera</button>
                     <button id="3" onClick={() => filterSelection('Laptop')} className="rounded-pill btn btn-outline-danger m-1 py-2 px-5">Laptop</button>
                     <button id="4" onClick={() => filterSelection('T-shirt')} className="rounded-pill btn btn-outline-danger m-1 py-2 px-5">T-shirt</button >
@@ -42,9 +42,9 @@ function Product() {
                 </div >
 
                 <div className="container-fluid mt-4">
-                    <div className="row d-flex align-items-center flex-wrap justify-content-center g-3">
+                    <div className="productCard">
                         {filterArr.length === 0 ? "No Products Available" : filterArr.map((element) => {
-                            return <div key={element.id} className="col-8 col-lg-8 col-xl-3 col-sm-4">
+                            return <div key={element.id}>
                                 <ProductCard info={element.info} title={element.title} avatar={element.avatar} price={element.price} proCateogry={element.proCateogry} cardId={element.id} />
                             </div>
                         })}

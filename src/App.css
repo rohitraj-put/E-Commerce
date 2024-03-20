@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  font-size: 18px;
 
 }
 
@@ -12,7 +14,7 @@ body {
 }
 
 .col {
-  height: 88vh;
+  min-height: 55vh;
 }
 
 table {
@@ -45,8 +47,14 @@ tr:nth-child(even) {
   padding: 10px;
 }
 
+.productCard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap');
+
 
 #myBtnContainer {
   display: flex;
@@ -198,5 +206,7 @@ tr:nth-child(even) {
   }
 
 }
+
+
 
 @media screen and (max-width: 800px) {}

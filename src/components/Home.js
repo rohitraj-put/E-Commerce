@@ -38,7 +38,7 @@ function Home() {
 
             <section className="bg-danger mt-4 mb-5">
                 <div className="container">
-                    <div className="row">
+                    <div className="row mt-5">
                         <div className="text-white text-center py-7 col-lg-6 py-5">
                             <h2 className="display-4 text-uppercase mb-4 pt-5">Final sales</h2>
                             <p className="mb-0">Up to</p>
@@ -208,19 +208,19 @@ function Home() {
                 </div>
             </div>
             <div className="row row-cols-1 row-cols-md-3 container-fluid mt-5">
-                <div className="col ">
-                    <div className="card h-60">
+                <div className="col">
+                    <div className="card h-60 bg-danger">
                         <img src="https://cartzilla.createx.studio/img/home/categories/cat-sm01.jpg" className="card-img-top" alt="..." />
-                        <div className="card-body">
+                        <div className="card-body text-white">
                             <h5 className="card-title text-center fs-3">Man</h5>
                         </div>
 
                     </div>
                 </div>
                 <div className="col">
-                    <div className="card h-60">
+                    <div className="card h-60 bg-danger">
                         <img src="https://cartzilla.createx.studio/img/home/categories/cat-sm02.jpg" className="card-img-top" alt="..." />
-                        <div className="card-body" >
+                        <div className="card-body text-white" >
                             <h5 className="card-title text-center fs-3">Woman</h5>
 
                         </div>
@@ -228,9 +228,9 @@ function Home() {
                     </div>
                 </div>
                 <div className="col ">
-                    <div className="card h-60">
+                    <div className="card h-60 bg-danger">
                         <img src="https://cartzilla.createx.studio/img/home/categories/cat-sm03.jpg" className="card-img-top" alt="..." />
-                        <div className="card-body">
+                        <div className="card-body text-white">
                             <h5 className="card-title text-center fs-3">Kids</h5>
                         </div>
                     </div>
@@ -238,7 +238,6 @@ function Home() {
             </div>
 
             <Footer />
-
             {/* <SimpleSlider /> */}
         </>
     )

@@ -75,7 +75,7 @@ function Header() {
                                 <span class="visually-hidden">unread messages</span>
                             </span>
                         </button></NavLink>
-                        <NavLink to='/sign'><button className="btn btn-outline-danger fw-bold" type="submit">Log In</button></NavLink>
+                        <NavLink to='/sign'><button className="btn btn-outline-danger fw-bold" type="submit">Sign In</button></NavLink>
 
                     </div>
                 </div>

@@ -49,12 +49,12 @@ function ProductSlider() {
     return (
         <>
             <Swiper
-
                 modules={[Pagination, A11y]}
-                spaceBetween={30}
+                spaceBetween={20}
                 slidesPerView={5.5}
                 pagination={{ clickable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
+                watchOverflow={false}
             >
                 {cardSlider}
 

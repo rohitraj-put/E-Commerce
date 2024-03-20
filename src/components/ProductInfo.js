@@ -3,11 +3,14 @@ import Header from '../layout/Header'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import ProductSlider from './ProductSlider'
+import Footer from '../layout/Footer'
 
 
 function ProductInfo() {
     const [item, setItem] = useState(1)
     const [datas, setDatas] = useState([])
+    const oldPrice = (datas.price)
+
     const { id } = useParams()
     useEffect(() => {
         axios.get(`https://65e3567b88c4088649f5a918.mockapi.io/ecommerce/${id}`)
@@ -21,20 +24,23 @@ function ProductInfo() {
     const cardAlign = {
         aspectRatio: "3/2.5"
     }
+    const increase = () => {
+        setItem(item + 1)
 
-    if (setItem < 1) {
-        alert("hello")
+    }
+    const decrease = () => {
+        setItem(item - 1)
     }
 
-
+    const newPrice = Math.round(((oldPrice / 100) * 70) * item)
 
     return (
         <>
             <Header />
 
             <div className="container  px-lg-5 my-5">
-                <div className="row gx-4 gx-lg-5 align-items-center">
-                    <div className="col-md-6">
+                <div className="row gx-4 gx-lg-5 align-items-top">
+                    <div className="col-md-6 ">
                         <img
                             className="card-img-top mb-4 mb-md-0"
                             style={cardAlign}
@@ -54,12 +60,12 @@ function ProductInfo() {
                         <div className="fs-5 mb-5">
                             <div className="small mb-1 text-uppercase">{datas.title}</div>
                             <span className="text-decoration-line-through">$ {datas.price} </span><span className='fs-1'>70% Off</span><br />
-                            <h2> $ {datas.price}</h2>
+                            <h2> $ {newPrice}</h2>
                         </div>
 
                         <div className="d-flex justify-content-between">
                             <div className='d-flex'>
-                                <button className='btn btn-outline-dark' onClick={() => setItem(item - 1)}>-</button>
+                                <button className='btn btn-outline-dark' onClick={decrease}>-</button>
                                 <input
                                     className="form-control text-center mx-3"
                                     id="inputQuantity"
@@ -68,7 +74,7 @@ function ProductInfo() {
                                     style={{ maxWidth: "4rem" }}
                                     disabled
                                 />
-                                <button className='btn btn-outline-dark' onClick={() => setItem(item + 1)}>+</button>
+                                <button className='btn btn-outline-dark' onClick={increase}>+</button>
 
                             </div>
                             <button className="btn btn-outline-dark flex-shrink-0" type="button">
@@ -78,10 +84,23 @@ function ProductInfo() {
 
                         </div>
                         <Link className="btn btn-dark flex-shrink-0 my-3 w-100" to='/payment'> Buy Now </Link>
+
+                        <div>
+                            <h3 className='px-4 mt-4'>About this item <strong className='text-danger'>(Demo Text)</strong></h3>
+                            <ul>
+                                <li className='py-1'>Playback - Enjoy up to 55 hours of music with the powerful battery backup.</li>
+                                <li className='py-1'>Fast charge - With the fast-charging feature, you can get 100 minutes of uninterrupted playing time after charging the earbuds for only 10 minutes.</li>
+                                <li className='py-1'>Drivers - The enhanced dual 10 mm dynamic drivers make way for immersive sound and clearer calls..</li>
+                                <li className='py-1'>IP rating - The earbuds' body comes protected with IPX5 rating for resistance to water and perspiration.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div >
             </div >
+
             <ProductSlider />
+
+            <Footer />
 
         </>
     )

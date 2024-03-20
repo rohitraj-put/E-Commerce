@@ -1,18 +1,29 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { IoMdClose } from "react-icons/io";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Payment() {
     const backBtn = useNavigate()
+
+    const CancelPay = () => {
+        toast.error('your email and password is wrong !')
+        backBtn(-1)
+    }
+
     return (
         <>
+
             <div className="card">
+                <h2 className='text-center text-danger mt-3 '>Sorry, user payment method is disabled !</h2>
                 <div className="card-body">
                     <div className="container mb-5 mt-3">
                         <div className="row d-flex align-items-baseline">
                             <div className="col-xl-12 d-flex justify-content-between">
 
                                 <Link>
-                                    <button className='btn btn-danger' onClick={() => backBtn(-1)}>Back</button>
+                                    <button className='btn btn-outline-danger' onClick={CancelPay}> Cancel <IoMdClose /><ToastContainer /></button>
                                 </Link>
                                 <p style={{ color: "#7e8d9f", fontSize: 20 }}>
                                     Invoice <strong>ID: #123-123</strong>
@@ -24,7 +35,7 @@ function Payment() {
                             <div className="col-md-12">
                                 <div className="text-center">
                                     <i className="fab fa-mdb fa-4x ms-0" style={{ color: "#5d9fc5" }} />
-                                    <h2 className="pt-0">Mytra.com</h2>
+                                    <h2 className="pt-0"><img src='https://jdkservices.in/wp-content/uploads/2022/09/Myntra_logo.png' style={{ width: "200px", height: "50px" }} />.com</h2>
                                 </div>
                             </div>
                             <div className="row">
@@ -49,7 +60,7 @@ function Payment() {
                                         </li>
                                         <li className="text-muted">
                                             <i className="fas fa-circle" style={{ color: "#84B0CA" }} />
-                                            <span className="fw-bold">Creation Date: </span>May 23,2024
+                                            <span className="fw-bold">Creation Date: </span>{Date()}
                                         </li>
                                         <li className="text-muted">
                                             <i className="fas fa-circle" style={{ color: "#84B0CA" }} />
@@ -83,20 +94,6 @@ function Payment() {
                                             <td>$200</td>
                                             <td>$800</td>
                                         </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Web hosting</td>
-                                            <td>1</td>
-                                            <td>$10</td>
-                                            <td>$10</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Consulting</td>
-                                            <td>1 year</td>
-                                            <td>$300</td>
-                                            <td>$300</td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -127,7 +124,7 @@ function Payment() {
                                 <div className="col-xl-2">
                                     <button
                                         type="button"
-                                        className="btn btn-primary text-capitalize"
+                                        className="btn btn-primary text-capitalize" disabled
                                         style={{ backgroundColor: "#60bdf3" }}
                                     >
                                         Pay Now

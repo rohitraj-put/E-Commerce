@@ -1,7 +1,10 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import { Routes, Route } from 'react-router-dom';
+import {
+  Routes
+  , Route
+} from 'react-router-dom';
 import Home from './components/Home';
 import Sign from './layout/Sign';
 import Active from './AdminPannel/Active';
@@ -14,14 +17,23 @@ import CardView from './AdminPannel/CardView';
 import InsertData from './AdminPannel/InsertData';
 import PageNotFound from './layout/PageNotFound';
 import ProductInfo from './components/ProductInfo';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Payment from './components/Payment';
+import Loading from './layout/Loading';
+
 
 
 export const UserContext = React.createContext()
 export const UserChanel = React.createContext()
 
 function App() {
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000)
+  }, [])
+  if (loading) {
+    return <Loading />
+  }
 
   return (
     <>
@@ -30,8 +42,7 @@ function App() {
 
 
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/sign' element={<Sign />}>
+            <Route path='/' element={<Home />} /> <Route path='/sign' element={<Sign />}>
               <Route path='active' element={<Active />} />
               <Route path='insert' element={<InsertData />} />
               <Route path='view' element={<View />} />
@@ -47,7 +58,6 @@ function App() {
           </Routes>
         </UserChanel.Provider>
       </UserContext.Provider >
-
     </>
   );
 }
