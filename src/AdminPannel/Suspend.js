@@ -28,7 +28,7 @@ function Suspend() {
 
     return (
         <>
-            <h1 className='bg-dark-subtle p-3'>User Suspend </h1>
+            <h1 className='bg-dark-subtle p-3'>Delete Card </h1>
             <table>
                 <tr>
                     <th>Id</th>

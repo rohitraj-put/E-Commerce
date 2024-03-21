@@ -6,11 +6,12 @@ import AdminHeader from '../AdminPannel/AdminHeader'
 import Header from './Header'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom'
 
 
 
 function Sign() {
-
+    const navigate = useNavigate()
     const email = useRef()
     const password = useRef()
 
@@ -22,6 +23,8 @@ function Sign() {
         if (email.current.value === "rohit@gmail.com" && password.current.value === "12345") {
             localStorage.setItem("emailData", "rohit@gmail.com")
             localStorage.setItem("passwordData", "12345")
+            navigate('/sign/active')
+
 
         }
         else {

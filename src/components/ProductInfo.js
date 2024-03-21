@@ -4,6 +4,8 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import ProductSlider from './ProductSlider'
 import Footer from '../layout/Footer'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function ProductInfo() {
@@ -11,7 +13,7 @@ function ProductInfo() {
     const [datas, setDatas] = useState([])
     const oldPrice = (datas.price)
 
-    const { id } = useParams()
+    const { id, } = useParams()
     useEffect(() => {
         axios.get(`https://65e3567b88c4088649f5a918.mockapi.io/ecommerce/${id}`)
             .then(res => {
@@ -25,17 +27,26 @@ function ProductInfo() {
         aspectRatio: "3/2.5"
     }
     const increase = () => {
-        setItem(item + 1)
+        if (item < 5) {
+            setItem(item + 1)
+        } else if (item == 5) {
+            toast.warning(`Last ${item} Products Sold Out
+            Sorry , Guys Product Not Available`)
+        }
+
 
     }
     const decrease = () => {
-        setItem(item - 1)
+        if (item > 1) {
+            setItem(item - 1)
+        }
     }
 
     const newPrice = Math.round(((oldPrice / 100) * 70) * item)
 
     return (
         <>
+            <ToastContainer />
             <Header />
 
             <div className="container  px-lg-5 my-5">

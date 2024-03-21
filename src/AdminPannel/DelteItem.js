@@ -29,7 +29,7 @@ function DeleteItem() {
 
     return (
         <>
-            <h1>{fullName} {surName}</h1>
+            <h3 className='text-center'>{fullName} {surName}</h3>
             <h1 className='p-4'>DeleteItem Card data</h1>
             <div className="mb-3">
                 <form className='form' onSubmit={SubmitHendler}>
