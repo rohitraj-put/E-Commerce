@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { IoCartOutline } from "react-icons/io5";
-import { CiSearch } from "react-icons/ci";
 
 
 function Header() {
@@ -10,13 +9,14 @@ function Header() {
     const NavToggle = () => {
         active === 'navbar-toggler-icon' ? setActive('navbar-toggler-icon btn-close') : setActive('navbar-toggler-icon')
     }
+    const getItemValue = localStorage.getItem("item")
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{ position: "fixed", zIndex: "9999", width: "100%", top: "0px" }}>
                 <div className="container-fluid">
                     <NavLink className="navbar-brand fw-bold fs-3" to="/">
-                        <img src='https://jdkservices.in/wp-content/uploads/2022/09/Myntra_logo.png' style={{ width: "200px", height: "50px" }} alt='logo' />
+                        <img src='https://brandlogos.net/wp-content/uploads/2022/03/myntra-logo-brandlogos.net_.png' style={{ width: "60px", height: "50px" }} alt='logo' />
                     </NavLink>
                     <div className="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className={active} onClick={NavToggle}></span>
@@ -24,15 +24,19 @@ function Header() {
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+
                             <li className="nav-item">
-                                <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
+                                <NavLink className="nav-link" to="#">MAN</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="#">About</NavLink>
+                                <NavLink className="nav-link" to="#">WOMAN</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="#">KIDS</NavLink>
                             </li>
                             <li className="nav-item dropdown">
                                 <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Pages
+                                    HOME & LIVING
                                 </NavLink>
                                 <ul className="dropdown-menu">
                                     <li><Link className="dropdown-item" to="#">Action</Link></li>
@@ -48,7 +52,7 @@ function Header() {
                             </li>
                             <li className="nav-item dropdown">
                                 <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Products
+                                    BEAUTY
                                 </NavLink>
                                 <ul className="dropdown-menu">
                                     <li><Link className="dropdown-item" to="#">Action</Link></li>
@@ -64,15 +68,61 @@ function Header() {
                             </li>
 
                         </ul>
-                        <div className="col-auto d-flex">
-                            <input type="text" className="border border-danger rounded-start p-2" id="inputPassword2" placeholder="Search"></input>
-                            <i className='border border-danger rounded-end fs-4 px-3'><CiSearch /></i>
+                        <div className="searchbar">
+                            <div className="searchbar-wrapper">
+                                <div className="searchbar-left">
+                                    <div className="search-icon-wrapper">
+                                        <span className="search-icon searchbar-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="searchbar-center">
+                                    <div className="searchbar-input-spacer" />
+                                    <input
+                                        type="text"
+                                        className="searchbar-input"
+                                        maxLength={2048}
+                                        name="q"
+                                        autoCapitalize="off"
+                                        autoComplete="off"
+                                        title="Search"
+                                        role="combobox"
+                                        placeholder="Search for products brands and more"
+                                    />
+                                </div>
+                                <div className="searchbar-right">
+                                    <svg
+                                        className="voice-search"
+                                        role="button"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            fill="#4285f4"
+                                            d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"
+                                        ></path>
+                                        <path fill="#34a853" d="m11 18.08h2v3.92h-2z" />
+                                        <path
+                                            fill="#fbbc05"
+                                            d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"
+                                        ></path>
+                                        <path
+                                            fill="#ea4335"
+                                            d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                        <NavLink to='#' className="px-3"><button type="button" class="btn btn-outline-danger position-relative">
+
+                        <NavLink to='#' className="px-3"><button type="button" className="btn btn-outline-danger position-relative">
                             <IoCartOutline />
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                2
-                                <span class="visually-hidden">unread messages</span>
+                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                {getItemValue}
+                                <span className="visually-hidden">unread messages</span>
                             </span>
                         </button></NavLink>
                         <NavLink to='/sign'><button className="btn btn-outline-danger fw-bold" type="submit">Sign In</button></NavLink>

@@ -19,17 +19,14 @@ function ProductSlider() {
     useEffect(() => {
         axios.get('https://65e3567b88c4088649f5a918.mockapi.io/ecommerce')
             .then(res => {
-
                 setDatas(res.data)
             })
-            .catch(err => {
-                console.log(err)
-            })
+
     }, [])
 
 
     const cardSlider = datas.map(data =>
-        <SwiperSlide className='container'>
+        <SwiperSlide className='container' key={data.id}>
             <div className="card" style={{ width: '14rem', margin: "40px 0px 40px 0px" }}>
                 <img style={cardAlign} src={data.avatar} className="card-img-top" alt="..." />
                 <div className="card-body">

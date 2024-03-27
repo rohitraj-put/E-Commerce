@@ -5,16 +5,6 @@ function Footer() {
         <>
             <footer className="container mt-5 pt-3 border-top">
                 <div className="row">
-                    <div className="col-2 col-md">
-                        <img
-                            className="mb-2"
-                            src="https://jdkservices.in/wp-content/uploads/2022/09/Myntra_logo.png"
-                            alt=""
-                            width={200}
-                            height={60}
-                        />
-                        <small className="d-block text-body-secondary">© 2023-2024</small>
-                    </div>
                     <div className="col-6 col-md">
                         <h5>Features</h5>
                         <ul className="list-unstyled text-small">
@@ -101,6 +91,7 @@ function Footer() {
                         </ul>
                     </div>
                 </div>
+                <h4 className="d-block text-body-secondary text-center">© 2023-2024</h4>
             </footer>
         </>
 

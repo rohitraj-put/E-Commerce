@@ -41,15 +41,20 @@ function ProductInfo() {
             setItem(item - 1)
         }
     }
+    const OneUnit = Math.round(((oldPrice / 100) * 70))
 
-    const newPrice = Math.round(((oldPrice / 100) * 70) * item)
+
+    localStorage.setItem("item", item)
+    localStorage.setItem("oneUnit", OneUnit)
+    localStorage.setItem("ProductName", (datas.proCateogry))
+
 
     return (
         <>
             <ToastContainer />
             <Header />
 
-            <div className="container  px-lg-5 my-5">
+            <div className="container  px-lg-5" style={{ marginTop: "100px" }}>
                 <div className="row gx-4 gx-lg-5 align-items-top">
                     <div className="col-md-6 ">
                         <img
@@ -70,8 +75,8 @@ function ProductInfo() {
                         </p>
                         <div className="fs-5 mb-5">
                             <div className="small mb-1 text-uppercase">{datas.title}</div>
-                            <span className="text-decoration-line-through">$ {datas.price} </span><span className='fs-1'>70% Off</span><br />
-                            <h2> $ {newPrice}</h2>
+                            <span className="text-decoration-line-through">$ {datas.price}.00 </span><span className='fs-1'>70% Off</span><br />
+                            <h2> $ {OneUnit}.00</h2>
                         </div>
 
                         <div className="d-flex justify-content-between">
@@ -79,9 +84,8 @@ function ProductInfo() {
                                 <button className='btn btn-outline-dark' onClick={decrease}>-</button>
                                 <input
                                     className="form-control text-center mx-3"
-                                    id="inputQuantity"
                                     type="num"
-                                    Value={item}
+                                    value={item}
                                     style={{ maxWidth: "4rem" }}
                                     disabled
                                 />

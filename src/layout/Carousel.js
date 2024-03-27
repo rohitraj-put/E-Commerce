@@ -3,7 +3,7 @@ import React from 'react'
 function Carousel() {
     return (
         <>
-            <div id="carouselExample" className="carousel slide">
+            <div id="carouselExample" className="carousel slide" style={{ marginTop: "78px" }}>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Consumables/X-GL/Feb5/PC_Hero_1_3000._CB582457311_.jpg" className="d-block w-100" alt="..." />

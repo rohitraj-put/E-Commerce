@@ -10,7 +10,7 @@ import Footer from '../layout/Footer'
 function Home() {
     return (
         <>
-            <div className="py-3 bg-dark bg-pattern">
+            {/* <div className="py-3 bg-dark bg-pattern">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -25,7 +25,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <Header />
 
             <Carousel />

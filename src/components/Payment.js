@@ -8,9 +8,23 @@ function Payment() {
     const backBtn = useNavigate()
 
     const CancelPay = () => {
-        toast.error('your email and password is wrong !')
         backBtn(-1)
     }
+    const getItemValue = localStorage.getItem("item")
+    const oneUnit = localStorage.getItem("oneUnit")
+    const price = Math.floor(getItemValue * oneUnit)
+    const ProductName = localStorage.getItem("ProductName")
+
+    const totalTex = Math.round(((price / 100) * 3))
+
+    const totalPrice = price + totalTex
+
+    const current = new Date();
+    const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
+
+    const showTime = current.getHours()
+        + ':' + current.getMinutes()
+        + ":" + current.getSeconds();
 
     return (
         <>
@@ -60,7 +74,7 @@ function Payment() {
                                         </li>
                                         <li className="text-muted">
                                             <i className="fas fa-circle" style={{ color: "#84B0CA" }} />
-                                            <span className="fw-bold">Creation Date: </span>{Date()}
+                                            <span className="fw-bold">Creation Date: </span>{date} {showTime}
                                         </li>
                                         <li className="text-muted">
                                             <i className="fas fa-circle" style={{ color: "#84B0CA" }} />
@@ -89,10 +103,10 @@ function Payment() {
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td>Pro Package</td>
-                                            <td>4</td>
-                                            <td>$200</td>
-                                            <td>$800</td>
+                                            <td>{ProductName}</td>
+                                            <td>{getItemValue}</td>
+                                            <td>${oneUnit}.00</td>
+                                            <td>${price}.00</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -104,15 +118,16 @@ function Payment() {
                                 <div className="col-xl-3">
                                     <ul className="list-unstyled">
                                         <li className="text-muted ms-3">
-                                            <span className="text-black me-4">SubTotal</span>$1110
+                                            <span className="text-black me-4">SubTotal</span>${price}.00
                                         </li>
                                         <li className="text-muted ms-3 mt-2">
-                                            <span className="text-black me-4">Tax(15%)</span>$111
+                                            <span className="text-black me-4">Tax(3%)</span>  &nbsp;&nbsp;&nbsp;&nbsp;${totalTex}.00
                                         </li>
+
                                     </ul>
                                     <p className="text-black float-start">
                                         <span className="text-black me-3"> Total Amount</span>
-                                        <span style={{ fontSize: 25 }}>$1221</span>
+                                        <span style={{ fontSize: 25 }}>${totalPrice}.00</span>
                                     </p>
                                 </div>
                             </div>
@@ -124,8 +139,8 @@ function Payment() {
                                 <div className="col-xl-2">
                                     <button
                                         type="button"
-                                        className="btn btn-primary text-capitalize" disabled
-                                        style={{ backgroundColor: "#60bdf3" }}
+                                        className="btn btn-success text-capitalize" disabled
+
                                     >
                                         Pay Now
                                     </button>
