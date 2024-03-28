@@ -1,10 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-bootstrap'
 import { FaRegHeart } from "react-icons/fa";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function ProductCard(props) {
-    const NavigatePage = useNavigate()
 
     const cardAlign = {
         aspectRatio: "3/2"

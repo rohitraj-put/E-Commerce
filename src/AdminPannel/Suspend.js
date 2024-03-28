@@ -30,14 +30,14 @@ function Suspend() {
         <>
             <h1 className='bg-dark-subtle p-3'>Delete Card </h1>
             <table>
-                <tr>
+                <tr className='text-capitalize'>
                     <th>Id</th>
                     <th>title</th>
                     <th>avatar</th>
                     <th>price</th>
                     <th>proCateogry</th>
                     <th>info</th>
-                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
                 {
                     tableInfor

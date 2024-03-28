@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { IoMdClose } from "react-icons/io";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Payment() {
@@ -49,7 +49,7 @@ function Payment() {
                             <div className="col-md-12">
                                 <div className="text-center">
                                     <i className="fab fa-mdb fa-4x ms-0" style={{ color: "#5d9fc5" }} />
-                                    <h2 className="pt-0"><img src='https://jdkservices.in/wp-content/uploads/2022/09/Myntra_logo.png' style={{ width: "200px", height: "50px" }} />.com</h2>
+                                    <h2 className="pt-0"><img src='https://jdkservices.in/wp-content/uploads/2022/09/Myntra_logo.png' alt='logo' style={{ width: "200px", height: "50px" }} />.com</h2>
                                 </div>
                             </div>
                             <div className="row">

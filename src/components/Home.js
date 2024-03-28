@@ -4,6 +4,7 @@ import Carousel from '../layout/Carousel'
 import Product from './Product'
 import ProductSlider from './ProductSlider'
 import Footer from '../layout/Footer'
+import AddToCart from './AddToCart'
 // import SimpleSlider from './CardShow'
 
 

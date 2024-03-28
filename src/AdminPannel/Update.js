@@ -29,7 +29,7 @@ function Update() {
         <>
             <h1 className='bg-dark-subtle p-3'>User Update </h1>
             <table>
-                <tr>
+                <tr className='text-capitalize'>
                     <th>Id</th>
                     <th>title</th>
                     <th>avatar</th>
