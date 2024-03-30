@@ -1,4 +1,4 @@
-# CheckOut my live mantra_shoping-app 
+# Checkout my live mantra_shoping-app 
 
 (https://mantrashoping.netlify.app/)
 
