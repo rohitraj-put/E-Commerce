@@ -75,6 +75,9 @@ tr:nth-child(even) {
   margin: 5px 0 10px 0;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 
 #login-container {
   min-height: 400px;

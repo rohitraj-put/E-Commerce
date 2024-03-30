@@ -8,6 +8,8 @@ import 'swiper/css/scrollbar';
 import { NavLink } from 'react-bootstrap';
 import axios from 'axios';
 import { FaShoppingCart } from "react-icons/fa";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 function ProductSlider() {
     const [datas, setDatas] = useState([])
@@ -23,6 +25,33 @@ function ProductSlider() {
             })
 
     }, [])
+    const responsive = {
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 5,
+            slidesToSlide: 1
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 900 },
+            items: 4,
+            slidesToSlide: 1
+        },
+        mobile: {
+            breakpoint: { max: 900, min: 600 },
+            items: 3,
+            slidesToSlide: 1
+        },
+        midMobile: {
+            breakpoint: { max: 600, min: 480 },
+            items: 2,
+            slidesToSlide: 1
+        },
+        SmallMobile: {
+            breakpoint: { max: 480, min: 0 },
+            items: 1,
+            slidesToSlide: 1
+        }
+    };
 
 
     const cardSlider = datas.map(data =>
@@ -45,17 +74,26 @@ function ProductSlider() {
 
     return (
         <>
-            <Swiper
-                modules={[Pagination, A11y]}
-                spaceBetween={20}
-                slidesPerView={5.5}
-                pagination={{ clickable: true }}
-                onSwiper={(swiper) => console.log(swiper)}
-                watchOverflow={false}
+            <Carousel
+                swipeable={false}
+                draggable={false}
+                showDots={true}
+                responsive={responsive}
+                ssr={true}
+                infinite={true}
+                autoPlaySpeed={1000}
+                keyBoardControl={true}
+                customTransition="all .5"
+                transitionDuration={500}
+                containerClass="carousel-container"
+                removeArrowOnDeviceType={["tablet", "mobile", "midMobile", "SmallMobile"]}
+                dotListClass="custom-dot-list-style"
+                itemClass="carousel-item-padding-40-px"
+
             >
                 {cardSlider}
 
-            </Swiper >
+            </Carousel >
 
         </>
     )

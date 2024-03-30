@@ -13,7 +13,7 @@ function Header() {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{ position: "fixed", zIndex: "9999", width: "100%", top: "0px" }}>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{ position: "fixed", zIndex: "2", width: "100%", top: "0px" }}>
                 <div className="container-fluid">
                     <NavLink className="navbar-brand fw-bold fs-3" to="/">
                         <img src='https://brandlogos.net/wp-content/uploads/2022/03/myntra-logo-brandlogos.net_.png' style={{ width: "60px", height: "50px" }} alt='logo' />

@@ -48,6 +48,10 @@ function ProductInfo() {
     localStorage.setItem("oneUnit", OneUnit)
     localStorage.setItem("ProductName", (datas.proCateogry))
 
+    const addToCart = () => {
+        toast.warning(`Thankyou..!`)
+    }
+
 
     return (
         <>
@@ -92,7 +96,7 @@ function ProductInfo() {
                                 <button className='btn btn-outline-dark' onClick={increase}>+</button>
 
                             </div>
-                            <button className="btn btn-outline-dark flex-shrink-0" type="button">
+                            <button className="btn btn-outline-dark flex-shrink-0" type="button" onClick={addToCart}>
                                 <i className="bi-cart-fill me-1" />
                                 Add to cart
                             </button>
