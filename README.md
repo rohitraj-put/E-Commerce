@@ -1,4 +1,6 @@
-# checkOut My Live Mantra_shoping-App [(https://mantrashoping.netlify.app/)]
+# checkOut My Live Mantra_shoping-App 
+
+(https://mantrashoping.netlify.app/)
 
 # Getting Started with Create React App
 
