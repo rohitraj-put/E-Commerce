@@ -8,7 +8,7 @@ function Carousel() {
     }
     return (
         <>
-            <div id="carouselExample" className="carousel slide" style={{ marginTop: "78px", position: "relative" }}>
+            <div id="carouselExample" className="carousel slide" style={{ marginTop: "78px" }}>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img src="https://m.media-amazon.com/images/I/71sC6R2WVsL._SX3000_.jpg" className="d-block w-100" alt="..." />
@@ -31,7 +31,7 @@ function Carousel() {
                 </button>
 
             </div>
-            <div className='container-fluid d-flex justify-content-center gap-3' style={{ position: "absolute", top: "23rem" }}>
+            <div className='container-fluid d-flex justify-content-center gap-3 mt-3'>
                 <div className='card'>
                     <img style={cardAlign} className='rounded' src='https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/B08345R1ZW---372x232._SY232_CB667322346_.jpg' alt='image' />
                 </div>

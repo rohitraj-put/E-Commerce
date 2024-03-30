@@ -30,8 +30,8 @@ function ProductInfo() {
         if (item < 5) {
             setItem(item + 1)
         } else if (item == 5) {
-            toast.warning(`Last ${item} Products Sold Out
-            Sorry , Guys Product Not Available`)
+            toast.warning(`Last ${item} Products Sold Out.
+            Sorry Guys, Product Not Available.`)
         }
 
 
@@ -41,7 +41,7 @@ function ProductInfo() {
             setItem(item - 1)
         }
     }
-    const OneUnit = Math.round(((oldPrice / 100) * 70))
+    const OneUnit = Math.round(((oldPrice / 100) * 30))
 
 
     localStorage.setItem("item", item)
@@ -49,7 +49,7 @@ function ProductInfo() {
     localStorage.setItem("ProductName", (datas.proCateogry))
 
     const addToCart = () => {
-        toast.warning(`Thankyou..!`)
+        toast.success(`Thankyou..!`)
     }
 
 
